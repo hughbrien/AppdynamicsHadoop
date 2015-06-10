@@ -51,4 +51,4 @@ else
 fi
 
 echo $(date): $JAVA_OPTS >> /tmp/java.log
-/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java_ $JAVA_OPTS
+$JAVA_HOME/bin/java_ $JAVA_OPTS
