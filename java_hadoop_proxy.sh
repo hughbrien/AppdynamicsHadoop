@@ -11,7 +11,17 @@
 # Rename the default java executable to "java_" and save this file as executable[chmod +x] in the PATH
 # The last line executes the actual java executable "java_"
 
-JAVA_OPTS="-Dappdynamics.controller.hostName=192.168.57.134 -Dappdynamics.controller.port=8090 -Dappdynamics.controller.ssl.enabled=false -Dappdynamics.agent.applicationName=Hadoop -javaagent:/home/hadoop/AppDynamics/AppServerAgent-4.0.1/javaagent.jar"
+### Deployment
+# Update the JAVA_OPTS with relevant data
+# Rename the default java executable to "java_" and save this file as executable[chmod +x] in the PATH
+# The last line executes the actual java executable "java_"
+$APPD_CONTROLLER=
+$APPD_PORT=443
+$APPD_SSL=true
+$APPD_APPLICATION_NAME=Hadoop
+$APPD_AGENT=-javaagent:/home/hadoop/AppDynamics/AppServerAgent-4.0.1/javaagent.jar
+
+JAVA_OPTS="-Dappdynamics.controller.hostName=$APPD_CONTROLLER -Dappdynamics.controller.port=$APPD_PORT -Dappdynamics.controller.ssl.enabled=false -Dappdynamics.agent.applicationName=$APPD_APPLICATION_NAME $APPD_AGENT "
 
 if [[ $@ == *"YarnChild"* ]]
 then
