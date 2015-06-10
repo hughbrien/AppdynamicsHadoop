@@ -15,11 +15,11 @@
 # Update the JAVA_OPTS with relevant data
 # Rename the default java executable to "java_" and save this file as executable[chmod +x] in the PATH
 # The last line executes the actual java executable "java_"
-$APPD_CONTROLLER=
-$APPD_PORT=443
-$APPD_SSL=true
-$APPD_APPLICATION_NAME=Hadoop
-$APPD_AGENT=-javaagent:/root/jobs/AppdynamicsHadoop/AppServerAgent/ver4.0.4.0/javaagent.jar
+APPD_CONTROLLER=apprenda.saas.appdynamics.com
+APPD_PORT=443
+APPD_SSL=true
+APPD_APPLICATION_NAME=Hadoop
+APPD_AGENT=-javaagent:/root/jobs/AppdynamicsHadoop/AppServerAgent/ver4.0.4.0/javaagent.jar
 
 JAVA_OPTS="-Dappdynamics.controller.hostName=$APPD_CONTROLLER -Dappdynamics.controller.port=$APPD_PORT -Dappdynamics.controller.ssl.enabled=false -Dappdynamics.agent.applicationName=$APPD_APPLICATION_NAME $APPD_AGENT "
 
