@@ -19,7 +19,7 @@ $APPD_CONTROLLER=
 $APPD_PORT=443
 $APPD_SSL=true
 $APPD_APPLICATION_NAME=Hadoop
-$APPD_AGENT=-javaagent:/home/hadoop/AppDynamics/AppServerAgent-4.0.1/javaagent.jar
+$APPD_AGENT=-javaagent:/root/jobs/AppdynamicsHadoop/AppServerAgent/ver4.0.4.0/javaagent.jar
 
 JAVA_OPTS="-Dappdynamics.controller.hostName=$APPD_CONTROLLER -Dappdynamics.controller.port=$APPD_PORT -Dappdynamics.controller.ssl.enabled=false -Dappdynamics.agent.applicationName=$APPD_APPLICATION_NAME $APPD_AGENT "
 
