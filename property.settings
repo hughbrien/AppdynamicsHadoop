@@ -1,0 +1,26 @@
+Here i am running
+
+1) Resource Manager.
+2) Node Manager
+
+Java Agent configurations for above daemons are made in $HADOOP_INSTALL/bin/yarn file
+
+3) NameNode
+4) Secondary NameNode
+5) DataNode
+
+Java Agent Configurations for above daemons are made in $HADOOP_INSTALL/bin/hdfs file
+
+6) JobHistory Server
+
+Java Agent configurations for above daemons are made in $HADOOP_INSTALL/bin/mapred file
+
+Short Lived JVM's
+--------------------
+7) Application Master
+8) Yarn Child (Map and Reduce Tasks)
+
+Java Agent configurations for above short lived JVM's are made as per attached screenshot and in $HADOOP_INSTALL/etc/hadoop/mapred-site.xml file
+
+9) Yarn jar (client)
+Java agent configurations for above jar are made in $HADOOP_INSTALL/bin/yarn
